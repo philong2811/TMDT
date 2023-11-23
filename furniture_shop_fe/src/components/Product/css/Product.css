@@ -1,0 +1,188 @@
+@keyframes move-btn-product {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.product {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+}
+.img-product {
+    width: 60%;
+    object-fit: cover;
+    margin-top: 2rem;
+    padding: 0.4rem;
+}
+.product-content {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.product-content label {
+    display: block;
+    height: 40px;
+}
+.product-price {
+    margin-top: 6rem;
+    color: #ee4d2d;
+    font-weight: bold;
+}
+.product-content-btn {
+    display: block;
+    position: absolute;
+    top: 1%;
+}
+.product-name {
+    position: absolute;
+    bottom: 25%;
+    right: 0;
+    left: 0;
+    height: 55px !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+.btn-product {
+    display: block;
+    border-radius: 6px;
+    border: 1px solid #dfdfe2;
+    padding: 4px 8px;
+    margin: 10px 0;
+    visibility: hidden;
+    margin-left: 5px;
+    color: black;
+}
+.product:hover {
+    border: 1px solid #dedede;
+    transition: border 1s;
+    border-radius: 10px;
+}
+.product:hover .img-product {
+    scale: 1.1;
+    cursor: pointer;
+    transition: scale 1s;
+}
+.product:hover .btn-product {
+    visibility: visible;
+    animation-name: move-btn-product;
+    animation-duration: 0.3s;
+}
+.product:hover .product-hot-badge {
+    scale: 1.1;
+    animation-name: badgeAnimation;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+}
+.product:hover .product-sale {
+    scale: 1.3;
+}
+.btn-product:hover {
+    color: red;
+    scale: 1.1;
+}
+.login-more {
+    text-align: center;
+}
+.product-hot-badge {
+    height: 35px;
+    width: 45px;
+    position: absolute;
+    background: url(https://nhaxinh.com/wp-content/themes/flatsome-child/assets/images/bg_bage.png) no-repeat;
+    background-size: 65% 93%;
+    background-position: 9px 2px;
+    right: 5%;
+    z-index: 1;
+    top: 2%;
+}
+.product-hot-badge label {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+@keyframes badgeAnimation {
+    0% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    40% {
+        transform: rotate(0);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+@media (max-width: 1200px) {
+    .product-name {
+        bottom: 30% !important;
+    }
+}
+@media (max-width: 768px) {
+    .product {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        width: 100% !important;
+        border-bottom: 1px solid #dfdfe2;
+    }
+}
+
+.product-sale {
+    position: absolute;
+    background-color: #eda500;
+    border-radius: 20px;
+    padding: 1px 5px;
+    color: #ee4d2d;
+    right: 5.2%;
+    top: 17%;
+    z-index: 1;
+    font-size: 0.9rem;
+    font-size: 12px;
+}
+.price-discount {
+    width: 100%;
+}
+.price-discount label {
+    display: inline;
+    position: relative;
+}
+.price-old {
+    position: absolute;
+    left: -1%;
+    text-decoration: line-through;
+    font-weight: normal !important;
+    color: black;
+}
+.price-new {
+    position: absolute;
+    right: -1%;
+    font-weight: bold;
+    color: red;
+}
+.number-favorite {
+    position: absolute;
+    color: #eda500;
+    bottom: 14%;
+    left: 43%;
+    font-size: 11px;
+}
+.number-quantity {
+    position: absolute;
+    color: #eda500;
+    bottom: 7%;
+    right: 2%;
+    font-size: 11px;
+}
